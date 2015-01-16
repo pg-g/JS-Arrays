@@ -28,7 +28,7 @@ var looper = function(fam) {
   }
 }
 
-
+COME BACK TO THIS ONE
 //3. Next problem
 var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops 
@@ -36,7 +36,7 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   //Code Here
 var reversedLooper = function(x) {
   y = x.length - 1;
-  for (var i = y; i >= 0; i--;) {
+  for (var i = y; i >= 0; i--;) {  //something wrong with my for loop?
     alert(x[i]);
   }
 }
@@ -47,7 +47,13 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes 
 //all values that aren't even from the given array.
   //Code Here
-
+var evenFinder = function(nums) {
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 !== 0) {
+      nums.splice(i,1);
+    }
+  }
+}
 
 //5. Next problem
 var nums = [1,2,34,54,55,34,32,11,19,17,54,66,13];
@@ -57,6 +63,31 @@ var odds = []
 //Have divider return an Array with the first item in the array being the evens array (all the even 
 //values from nums) and the second item in the Array being the odds array(all the odd values from nums).
   //Code Here
+var divider = function(nums, evens, odds) {
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 !== 0) {
+      x = nums.slice(i,i + 1);
+      odds.push(x[0]);
+    } else {
+      evens.push(nums[i]);
+    }
+  }
+  var final = [];
+  final.push(evens, odds);
+  console.log(final);
+}
+divider(nums, evens, odds);
+
+
+/*
+var divider = function(nums, evens, odds) {
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 !== 0) {
+      odds.push(nums[i]);
+    } else {}
+  }
+  console.log(odds);
+} */
 
 
 //6. Next Problem

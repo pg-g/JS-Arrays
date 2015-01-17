@@ -28,15 +28,14 @@ var looper = function(fam) {
   }
 }
 
-COME BACK TO THIS ONE
+
 //3. Next problem
 var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops 
 //through the given array backwards alerting every item in the array starting at the end.
   //Code Here
 var reversedLooper = function(x) {
-  y = x.length - 1;
-  for (var i = y; i >= 0; i--;) {  //something wrong with my for loop?
+  for (var i = x.length - 1; i >= 0; i--) {  //something wrong with my for loop?
     alert(x[i]);
   }
 }

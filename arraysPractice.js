@@ -164,7 +164,6 @@ var maker = function() {
 }
 
 
-//!!!!!!!!!ISSUE HERE
 //10. Next Problem
 var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
@@ -174,8 +173,9 @@ var addTen = function(nums) {
   for (var i = 0; i < nums.length; i++) {
     if (typeof(nums[i]) === "number") {
       nums[i] = nums[i] + 10;
-    } else if (typeof(nums[i]) === "strong") {
-      nums[i] = nums[i] + " + 10";              //!!!!!!! how to convert string to num???
+    } else if (typeof(nums[i]) === "string") {
+      nums[i] = Number(nums[i]);
+      nums[i] = nums[i] + 10;
     }
   }
   return nums;
